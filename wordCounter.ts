@@ -24,16 +24,18 @@ function countWords(filePath: string): number {
 }
 
 // Check if the correct number of command-line arguments is provided
-if (process.argv.length !== 3) {
+if (process.argv.length !== 3 && !process.env.JEST_WORKER_ID) {
     console.error("Please use the following syntax: ts-node wordCounter.ts <file_path>");
     process.exit(1);
 }
 
 // Get the file path from the command-line arguments
-const filePath: string = process.argv[2];
+const filePath: string = process.argv[2] || "./test_input/input.txt";
 
 // Call the countWords function and display the result
 const wordCount: number = countWords(filePath);
 if (wordCount !== -1) {
     console.log(`The number of words in ${filePath} is: ${wordCount}`);
 }
+
+export { countWords };
