@@ -20,4 +20,4 @@ Run the CLI program to count words in a text file.
 
 `npx ts-node wordCounter.ts <file_path>`
 
-Replace `<file_path>` with the path to the text file you want to analyze.
+Replace `<file_path>` with the path to the text file you want to analyse.
