@@ -9,7 +9,7 @@ Make sure you have Node.js and npm installed. Clone the repository and install t
 ```
 git clone https://github.com/josenymad/word-counter
 
-cd word_counter
+cd word-counter
 
 npm install
 ```
